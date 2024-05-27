@@ -1,22 +1,35 @@
-# metallb
+# MetalLB
+_This is educational purpose chart_ for [metallb](https://metallb.universe.tf/)
 
-![Version: 0.0.0](https://img.shields.io/badge/Version-0.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.0.0](https://img.shields.io/badge/AppVersion-v0.0.0-informational?style=flat-square)
+A network load-balancer implementation for Kubernetes using standard routing protocols 
 
-A network load-balancer implementation for Kubernetes using standard routing protocols
+# Tested on
+- Ubuntu 22.04
+- Kuberntes 1.27
+- Helm 3.15.0
 
-**Homepage:** <https://metallb.universe.tf>
+
+# Install
+Before install MetalLB by Helm chart, setup repository.
+
+``` bash
+$ helm repo add edu-v2 https://iac-sources.github.io/helm-charts/
+$ helm repo update
+```
+
+Then, Install MetalLB
+
+``` bash
+$ helm install metallb edu-v2/metallb --namespace=metallb-system --create-namespace
+```
+
+> **Tip**: To check installation, using `helm list`
+
+
 
 ## Source Code
 
 * <https://github.com/metallb/metallb>
-
-## Requirements
-
-Kubernetes: `>= 1.19.0-0`
-
-| Repository | Name | Version |
-|------------|------|---------|
-|  | crds | 0.0.0 |
 
 ## Values
 
