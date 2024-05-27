@@ -1,5 +1,5 @@
 # MetalLB
-_This is educational purpose chart_ for [metallb](https://metallb.universe.tf/)
+_This is a Helm chart, modified for educational purposes_ from [metallb](https://github.com/metallb/metallb/tree/main/charts/metallb)
 
 A network load-balancer implementation for Kubernetes using standard routing protocols 
 
