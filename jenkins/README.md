@@ -1,9 +1,6 @@
 # Jenkins
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/jenkins)](https://artifacthub.io/packages/helm/jenkinsci/jenkins)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Releases downloads](https://img.shields.io/github/downloads/jenkinsci/helm-charts/total.svg)](https://github.com/jenkinsci/helm-charts/releases)
-[![Join the chat at https://app.gitter.im/#/room/#jenkins-ci:matrix.org](https://badges.gitter.im/badge.svg)](https://app.gitter.im/#/room/#jenkins-ci:matrix.org)
+_This is a Helm chart, modified for educational purposes_ from [jenkins](https://github.com/jenkinsci/helm-charts)
 
 [Jenkins](https://www.jenkins.io/) is the leading open source automation server, Jenkins provides over 1800 plugins to support building, deploying and automating any project.
 
@@ -11,54 +8,26 @@ This chart installs a Jenkins server which spawns agents on [Kubernetes](http://
 
 Inspired by the awesome work of [Carlos Sanchez](https://github.com/carlossg).
 
-## Get Repository Info
+# Tested on
+- Ubuntu 22.04
+- Kuberntes 1.27
+- Helm 3.15.0
 
-```console
-helm repo add jenkins https://charts.jenkins.io
-helm repo update
+# Install
+Before install Jenkins by Helm chart, setup repository.
+
+``` bash
+$ helm repo add edu-v2 https://iac-sources.github.io/helm-charts/
+$ helm repo update
 ```
 
-_See [`helm repo`](https://helm.sh/docs/helm/helm_repo/) for command documentation._
+Then, Install Jenkins
 
-## Install Chart
-
-```console
-# Helm 3
-$ helm install [RELEASE_NAME] jenkins/jenkins [flags]
+``` bash
+$ helm install jenkins edu-v2/jenkins
 ```
 
-_See [configuration](#configuration) below._
-
-_See [helm install](https://helm.sh/docs/helm/helm_install/) for command documentation._
-
-## Uninstall Chart
-
-```console
-# Helm 3
-$ helm uninstall [RELEASE_NAME]
-```
-
-This removes all the Kubernetes components associated with the chart and deletes the release.
-
-_See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command documentation._
-
-## Upgrade Chart
-
-```console
-# Helm 3
-$ helm upgrade [RELEASE_NAME] jenkins/jenkins [flags]
-```
-
-_See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation._
-
-Visit the chart's [CHANGELOG](https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/CHANGELOG.md) to view the chart's release history.
-For migration between major version check [migration guide](#migration-guide).
-
-## Building weekly releases
-
-The default charts target Long-Term-Support (LTS) releases of Jenkins.
-To use other versions the easiest way is to update the image tag to the version you want.
-You can also rebuild the chart if you want the `appVersion` field to match.
+> **Tip**: To check installation, using `helm list`
 
 ## Configuration
 
@@ -67,7 +36,7 @@ To see all configurable options with detailed comments, visit the chart's [value
 
 ```console
 # Helm 3
-$ helm show values jenkins/jenkins
+$ helm show values edu-v2/jenkins
 ```
 
 For a summary of all configurable options, see [VALUES_SUMMARY.md](https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/VALUES_SUMMARY.md).
@@ -704,3 +673,7 @@ Upgrade an existing release from `stable/jenkins` to `jenkins/jenkins` seamlessl
 Chart release versions follow [SemVer](../../CONTRIBUTING.md#versioning), where a MAJOR version change (example `1.0.0` -> `2.0.0`) indicates an incompatible breaking change needing manual actions.
 
 See [UPGRADING.md](./UPGRADING.md) for a list of breaking changes
+
+## NOTE
+
+Document is modified by Book_k8sInfra authors
