@@ -22,11 +22,11 @@ entries:
           url: https://github.com/jenkinsci/helm-charts/issues
     apiVersion: v2
     appVersion: 2.440.3
-    created: "2024-05-28T09:56:46.4715067+09:00"
+    created: "2024-05-28T10:00:10.3084152+09:00"
     description: 'Jenkins - Build great things at any scale! As the leading open source
       automation server, Jenkins provides over 1800 plugins to support building, deploying
       and automating any project. '
-    digest: fcc7b9a8aa779b694aebafedfd577cda0e8ba79ce17d1f68caf86f13023c71a5
+    digest: d72f1db51a5599684d71d6f043d5d5ce6ad43eb1a2f0ccf9a3443791e62ce4d4
     home: https://www.jenkins.io/
     icon: https://get.jenkins.io/art/jenkins-logo/logo.svg
     keywords:
@@ -57,7 +57,7 @@ entries:
   metallb:
   - apiVersion: v2
     appVersion: v0.13.10
-    created: "2024-05-28T09:56:46.4720528+09:00"
+    created: "2024-05-28T10:00:10.3103091+09:00"
     dependencies:
     - condition: crds.enabled
       name: crds
@@ -65,7 +65,7 @@ entries:
       version: 0.13.10
     description: A network load-balancer implementation for Kubernetes using standard
       routing protocols
-    digest: e35d56c9590c7801f483131e9fcbc5273eaedafed96a8a471bbac0d11616f6a5
+    digest: 21584e492fcbb9ade99d3251827d1998a3b60a03c7f16fce2b77ef23d5fd253f
     home: https://metallb.universe.tf
     icon: https://metallb.universe.tf/images/logo/metallb-white.png
     kubeVersion: '>= 1.19.0-0'
@@ -76,4 +76,4 @@ entries:
     urls:
     - metallb-0.13.10.tgz
     version: 0.13.10
-generated: "2024-05-28T09:56:46.4671847+09:00"
+generated: "2024-05-28T10:00:10.3056302+09:00"
