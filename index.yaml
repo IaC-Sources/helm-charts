@@ -22,7 +22,7 @@ entries:
           url: https://github.com/jenkinsci/helm-charts/issues
     apiVersion: v2
     appVersion: 2.440.3
-    created: "2024-05-16T00:08:22.1275004+09:00"
+    created: "2024-05-28T09:56:46.4715067+09:00"
     description: 'Jenkins - Build great things at any scale! As the leading open source
       automation server, Jenkins provides over 1800 plugins to support building, deploying
       and automating any project. '
@@ -57,7 +57,7 @@ entries:
   metallb:
   - apiVersion: v2
     appVersion: v0.13.10
-    created: "2024-05-16T00:08:22.1290453+09:00"
+    created: "2024-05-28T09:56:46.4720528+09:00"
     dependencies:
     - condition: crds.enabled
       name: crds
@@ -76,4 +76,4 @@ entries:
     urls:
     - metallb-0.13.10.tgz
     version: 0.13.10
-generated: "2024-05-16T00:08:22.1241231+09:00"
+generated: "2024-05-28T09:56:46.4671847+09:00"
